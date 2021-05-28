@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Resources -->
+	<script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+	<script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+	<script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+			
+	<!-- Page Styles -->
+	<style>
+		h1 {
+			font-family: Arial Black;
+			font-size: 14pt;
+			}
+            
+		#leftmenu {
+			font-size: 10pt;
+			width:  10%;
+			height: 100%;
+			padding-left: 5px;
+			margin-left: 5px;
+			background-color: white;
+			color: #782f40;
+			border-right:	5px;
+			border-style: solid;
+			border-color: white grey white white;
+			border-width:	1px;
+			position: fixed;
+			}
+            
+		h2	{
+			font-family: Arial Black;
+			font-size: 10pt;
+			color: #782f40;
+			margin-top: 0px;
+			}
+            
+		h3	{
+			font-family: Arial Black;
+			font-size: 10pt;
+			color: #782f40;
+			margin-bottom: 3px;
+			margin-left: 5px;
+			}
+				
+		h4	{
+			font-family: Arial Black;
+			font-size: 10pt;
+			color: #782f40;
+			margin-left: 5px;
+			}
+			
+		h5	{
+			font-family: Arial Black;
+			font-size: 10pt;
+			color: #782f40;
+			margin-left: 5px;
+			}
+            
+		p	{
+			font-family: Arial;
+			font-size: 8pt;
+			color: #782f40;
+			}
+            
+		.schedule {
+			font-family: Arial Black;
+			width: 88%;
+			height: 100%;
+			margin-left: 11%;
+			margin-right: 0%;
+			}
+				        
+		.righttaskbar {
+			width: 10.5%;
+			height: 100%;
+			padding-left: 0px;
+			float: right;
+			background-color: #fff;
+			}
+			
+		#chartdiv {
+			width: 100%;
+			height: 100%;
+			position: relative;
+			}
+		
+		#chartarea {
+			width: 89%;
+			height: 100%;
+			
+			margin-right: 0px;
+			border-right:	5px;
+			border-style: solid;
+			border-color: white grey white white;
+			border-width:	1px;
+			}
+		</style>
+	</head>
+	<title>Project Schedules</title>
+	<body>
+		<h1>Charles Cullen Project Schedules</h1>
+		<div id="leftmenu">
+			<h2>Project Schedules</h2>
+			<p>Future Drop Down Menus?</p>
+		</div> 
+
+<!--Begin Chart 1-->		
+	<div class="schedule">
+        <h3>Country Club</h3>
+	
+	<!--Chart Code-->
+		<script type="text/javascript" src="project2.js"></script>
+		
+    <!-- HTML -->
+		<div class="righttaskbar">
+			<h2>Upcoming Tasks</h2>
+			<p>future task list</p>
+		</div>
+		<div id="chartarea">
+			<div id="chartdiv"></div>  
+		</div>
+	</div>
+<!--End Chart 1-->	
+
+<!--Begin Chart 2-->
+	<div class="schedule">
+		<h3>Jacksonville-Cato</h3>
+	
+	<!--Chart Code-->
+		<script type="text/javascript" src="project1.js"></script>
+		
+    <!-- HTML -->
+		<div class="righttaskbar">
+			<h2>Upcoming Tasks</h2>
+			<p>future task list</p>
+		</div>
+		<div id="chartarea">
+			<div id="chartdiv2"></div>  
+		</div>
+	</div>
+<!--End Chart 2-->
+
+<!--Begin Chart 3-->
+	<div class="schedule">
+		<h3>AECC Vimy Ridge</h3>
+	
+	<!--Chart Code-->
+		<script type="text/javascript" src="project3.js"></script>
+		
+    <!-- HTML -->
+		<div class="righttaskbar">
+			<h2>Upcoming Tasks</h2>
+			<p>future task list</p>
+		</div>
+		<div id="chartarea">
+			<div id="chartdiv3"></div>  
+		</div>
+	</div>
+<!--End Chart 3-->
+
+<!--Begin Chart 3-->
+	<div class="schedule">
+		<h3>Marion Street: 34th to 35th</h3>
+	
+	<!--Chart Code-->
+		<script type="text/javascript" src="project4.js"></script>
+		
+    <!-- HTML -->
+		<div class="righttaskbar">
+			<h2>Upcoming Tasks</h2>
+			<p>future task list</p>
+		</div>
+		<div id="chartarea">
+			<div id="chartdiv4"></div>  
+		</div>
+	</div>
+<!--End Chart 3-->
+	
+	</body>
+</html>
