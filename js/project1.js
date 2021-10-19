@@ -14,7 +14,7 @@
     var colorSet = new am4core.ColorSet();
     colorSet.saturation = 0.4;
 	
-    chart.dataSource.url = "/scheduleData.json";
+    chart.dataSource.url = "scheduleData.json";
 	chart.dataSource.parser = new am4core.JSONParser();
        
     var categoryAxis = chart.yAxes.push(new am4charts.CategoryAxis());
