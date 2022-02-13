@@ -1,0 +1,46 @@
+[	{
+	"name": "Surveys",
+	"fromDate": "2018-07-01 08:00",
+	"toDate": "2018-10-01 10:00",
+	"color": "#782f40"
+},	{
+	"name": "Surveys",
+	"fromDate": "2019-01-01 08:00",
+	"toDate": "2019-02-01 10:00",
+	"color": "#782f40"
+},	{
+	"name": "Environmental",
+	"fromDate": "2018-01-01 15:30",
+	"toDate": "2019-01-01 21:30",
+	"color": "#782f40"
+},	{
+	"name": "Environmental",
+	"fromDate": "2019-02-15 09:00",
+	"toDate": "2019-02-28",
+	"color": "#782f40"
+},	{
+ 	"name": "Environmental",
+	"fromDate": "2018-01-01 13:00",
+ 	"toDate": "2018-01-01 17:00",
+	"color": "#782f40"
+},	{
+	"name": "Preliminary Plans",
+ 	"fromDate": "2018-06-01 11:00",
+	"toDate": "2018-08-01 16:00",
+	"color": "#782f40"
+},	{
+ 	"name": "Preliminary Plans",
+	"fromDate": "2018-01-01 16:00",
+	"toDate": "2018-05-01 19:00",
+	"color": "#782f40"
+},	{
+ 	"name": "Final Plans",
+	"fromDate": "2019-01-01 16:00",
+	"toDate": "2020-01-01 20:00",
+	"color": "#782f40"
+},	{
+	"name": "Bidding",
+	"fromDate": "2018-01-01 13:00",
+	"toDate": "2018-01-01 24:00",
+	"color": "#782f40"
+}]
