@@ -109,16 +109,8 @@
 		dateAxis.max = new Date(2020, 2, 15, 0, 0, 0).getTime();
 		dateAxis.strictMinMax = true;
 		dateAxis.renderer.tooltipLocation = 0;
-	
-    // Create Series
-    var series1 = chart.series.push(new am4charts.ColumnSeries());
-	series1.columns.template.height = am4core.percent(60);
-	// series1.columns.template.tooltipText = "{name}";
-    series1.dataFields.openDateX = "fromDate";
-	series1.dataFields.dateX = "toDate";
-	series1.dataFields.categoryY = "name";
 
-    //Create beginBullet Series
+	//Create beginBullet Series
     var series7 = chart.series.push(new am4charts.LineSeries());
     series7.dataFields.dateX = "fromDate";
     series7.dataFields.categoryY = "name";
@@ -129,12 +121,6 @@
     series8.dataFields.dateX = "toDate";
     series8.dataFields.categoryY = "name";
     series8.strokeWidth = 0;
-
-    // column template
-    var columnTemplate = series1.columns.template;
-    columnTemplate.propertyFields.fill = "color"; // get color from data
-	columnTemplate.propertyFields.stroke = "color";
-	columnTemplate.strokeOpacity = 1;
 
     // Set bullet tooltip text font and size
 	// series1.columns.template.fillOpacity = .8;
@@ -176,38 +162,59 @@
     var bulletEnd = series8.bullets.push(new am4charts.CircleBullet());
     bulletEnd.stroke = am4core.color("#782f40");
     bulletEnd.strokeWidth = 3;
-    bulletEnd.opacity = 1; // initially invisible
-    bulletEnd.defaultState.properties.opacity = 1;
+    // initially invisible
+	bulletEnd.opacity = 1; 
+	bulletEnd.defaultState.properties.opacity = 1;
 
     // resize bulletBegin cursor when over
     bulletBegin.cursorOverStyle = am4core.MouseCursorStyle.horizontalResize;
     bulletBegin.draggable = true;
 
-    // resize bulletEnd cursor when over
-    bulletEnd.cursorOverStyle = am4core.MouseCursorStyle.horizontalResize;
-    bulletEnd.draggable = true;
-
     // create bulletBegin hover state
     var hoverState = bulletBegin.states.create("hover");
     hoverState.properties.scale = 2; // visible when hovered
-
-    // create bulletEnd hover state
-    var hoverState = bulletEnd.states.create("hover");
-    hoverState.properties.scale = 2; // visible when hovered
-
-    // bulletBegin while dragging
-    bulletBegin.events.on("drag", event => {
-        handleDragBegin(event);
-    });
+	 
+	// bulletBegin while dragging
+    // bulletBegin.events.on("drag", event => {
+       // handleDragBegin(event);
+    // });
 
     bulletBegin.events.on("dragstop", event => {
         handleDragBegin(event);
-        var beginDate = event.target.dataItem;
-        beginDate.isHover = false;
-        event.target.isHover = false;
+        // var beginDate = event.target.dataItem;
+        // beginDate.isHover = false;
+        // event.target.isHover = false;
     });
+	 
+	 function handleDragBegin(event) {
+        var beginDate = event.target.dataItem;
+		// return beginDate;
+		// convert coordinate to value
+        var value1 = dateAxis.xToValue(event.target.pixelX);
+		// set new value
+        beginDate.dateX = value1;
+		// make column hover
+        beginDate.isHover = true;
+        // make bullet hovered (as it might hide if mouse moves away)
+        event.target.isHover = true;
+		var value4 = beginDate.dateX;
+		console.log(value4);
+		// return value4;
+      }
 
-    // bulletEnd while dragging
+	// var value3 = handleDragBegin(event, value4);
+    // var value3 = handleDragBegin(event);
+	// console.log(value3);
+	    
+	// resize bulletEnd cursor when over
+    bulletEnd.cursorOverStyle = am4core.MouseCursorStyle.horizontalResize;
+    bulletEnd.draggable = true;   
+	 
+	// create bulletEnd hover state
+    var hoverState = bulletEnd.states.create("hover");
+    hoverState.properties.scale = 2; // visible when hovered
+	 
+	// bulletEnd while dragging
     bulletEnd.events.on("drag", event => {
         handleDragEnd(event);
     });
@@ -218,25 +225,12 @@
         endDate.isHover = false;
         event.target.isHover = false;
      });
-
-    function handleDragBegin(event) {
-        var beginDate = event.target.dataItem;
-        // convert coordinate to value
-        var value1 = dateAxis.xToValue(event.target.pixelX);
-        console.log(value1);
-        // set new value
-        beginDate.dateX = value1;
-        // make column hover
-        beginDate.isHover = true;
-        // make bullet hovered (as it might hide if mouse moves away)
-        event.target.isHover = true;
-      }
-      
-    function handleDragEnd(event) {
+   	 
+	 function handleDragEnd(event) {
         var endDate = event.target.dataItem;
         // convert coordinate to value
         var value2 = dateAxis.xToValue(event.target.pixelX);
-        console.log(value2);
+        // console.log(value2);
         // set new value
         endDate.dateX = value2;
         // make column hover
@@ -244,6 +238,22 @@
         // make bullet hovered (as it might hide if mouse moves away)
         event.target.isHover = true;
     }
+	
+	// Create Series
+    var series1 = chart.series.push(new am4charts.ColumnSeries());
+	series1.columns.template.height = am4core.percent(60);
+	// series1.columns.template.tooltipText = "{name}";
+	series1.dataFields.openDateX = "fromDate";
+	// series1.dataFields.openDateX = handleDragBegin(); 
+	series1.dataFields.dateX = "toDate";
+	series1.dataFields.categoryY = "name";
+	// series1.draggable = "true;"
+
+	// column template
+    var columnTemplate = series1.columns.template;
+    columnTemplate.propertyFields.fill = "color"; // get color from data
+	columnTemplate.propertyFields.stroke = "color";
+	columnTemplate.strokeOpacity = 1;
 
     // hover state
     // var columnHoverState = columnTemplate.column.states.create("hover");
