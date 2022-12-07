@@ -189,7 +189,7 @@
         let beginDate = event.target.dataItem;	 
     
     function handleDragBegin(event) {
-        beginDate = event.target.dataItem;
+        // beginDate = event.target.dataItem;
 		// return beginDate;
 		// convert coordinate to value
         var value1 = dateAxis.xToValue(event.target.pixelX);
