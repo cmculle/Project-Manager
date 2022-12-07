@@ -204,7 +204,6 @@
 
 	// var value3 = handleDragBegin(event, value4);
     // var value3 = handleDragBegin(event);
-	console.log(value3);
 	    
 	// resize bulletEnd cursor when over
     bulletEnd.cursorOverStyle = am4core.MouseCursorStyle.horizontalResize;
