@@ -4,7 +4,7 @@
     am4core.useTheme(am4themes_animated);
     // Themes end
 
-    var chart = am4core.create("chartdiv", am4charts.XYChart);
+    let chart = am4core.create("chartdiv", am4charts.XYChart);
     chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
     chart.dateFormatter.inputDateFormat = "yyyy-MM-dd";
 	  chart.paddingTop = "0px";
@@ -12,7 +12,7 @@
 	  chart.svgContainer.htmlElement.style.width = am4core.percent(100);
       chart.maskBullets = false; // allow bullets to go out of plot area
 		
-    var colorSet = new am4core.ColorSet();
+    let colorSet = new am4core.ColorSet();
     colorSet.saturation = 0.4;
 
     chart.data = [{
