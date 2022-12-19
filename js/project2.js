@@ -181,9 +181,9 @@
 
     bulletBegin.events.on("dragstop", event => {
         handleDragBegin(event);
-        // var beginDate = event.target.dataItem;
-        // beginDate.isHover = false;
-        // event.target.isHover = false;
+        let beginDate = event.target.dataItem;
+        beginDate.isHover = false;
+        event.target.isHover = false;
     });
 	 
         // let beginDate = event.target.dataItem;	 
