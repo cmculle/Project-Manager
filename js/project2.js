@@ -188,7 +188,7 @@
 	 
         let beginDate = event.target.dataItem;	 
     
-    function handleDragBegin(event) {
+	 function handleDragBegin(event) {
         // beginDate = event.target.dataItem;
 		// return beginDate;
 		// convert coordinate to value
