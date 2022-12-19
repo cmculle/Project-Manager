@@ -204,9 +204,9 @@
 		// return value4;
       }
 
-	// var value3 = handleDragBegin(event, value4);
-    // var value3 = handleDragBegin(event);
-	    
+	 // let value4 = handleDragBegin(event);
+	 // console.log(value4;)
+
 	// resize bulletEnd cursor when over
     bulletEnd.cursorOverStyle = am4core.MouseCursorStyle.horizontalResize;
     bulletEnd.draggable = true;   
