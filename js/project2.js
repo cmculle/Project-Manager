@@ -192,14 +192,14 @@
         // beginDate = event.target.dataItem;
 		// return beginDate;
 		// convert coordinate to value
-        var value1 = dateAxis.xToValue(event.target.pixelX);
+        let value1 = dateAxis.xToValue(event.target.pixelX);
 		// set new value
         beginDate.dateX = value1;
 		// make column hover
         beginDate.isHover = true;
         // make bullet hovered (as it might hide if mouse moves away)
         event.target.isHover = true;
-		var value4 = beginDate.dateX;
+		let value4 = beginDate.dateX;
 		console.log(value4);
 		// return value4;
       }
@@ -228,9 +228,9 @@
      });
    	 
 	 function handleDragEnd(event) {
-        var endDate = event.target.dataItem;
+        let endDate = event.target.dataItem;
         // convert coordinate to value
-        var value2 = dateAxis.xToValue(event.target.pixelX);
+        let value2 = dateAxis.xToValue(event.target.pixelX);
         // console.log(value2);
         // set new value
         endDate.dateX = value2;
