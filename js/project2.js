@@ -186,10 +186,10 @@
         // event.target.isHover = false;
     });
 	 
-        let beginDate = event.target.dataItem;	 
+        // let beginDate = event.target.dataItem;	 
     
 	 function handleDragBegin(event) {
-        // beginDate = event.target.dataItem;
+        let beginDate = event.target.dataItem;
 		// return beginDate;
 		// convert coordinate to value
         let value1 = dateAxis.xToValue(event.target.pixelX);
